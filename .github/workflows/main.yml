@@ -10,7 +10,7 @@ on:
 
 jobs: 
   my_test:
-    runs-on: ubuntu-latest
+    runs-on: ubunt-latest
 
     steps: 
     - name: print Hello Message
@@ -26,7 +26,7 @@ jobs:
       run: ls -la 
 
     - name: Git clone my repo
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
 
     - name: List current folder
       run: ls -la 
