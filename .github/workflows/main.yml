@@ -1,8 +1,8 @@
 # comments
 name: TicTacToe_Actions
 env:
-  APPLICATION_NAME    : "MyFlask"
-  DEPLOY_PACKAGE_NAME : "flack-deploy-ver-${{ github.sha }}"
+  JAVA_VERSION : "17"
+  DISTRIBUTION : "zulu"
 on: 
   push:
     branches:
@@ -13,23 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-    - name: print Hello Message
-      run : echo "Heelo World from Test"
-
-    - name: Execute few commands
-      run : |
-        echo "Hello Message 1"
-        echo "Hello Message 2"
-        echo "Application name is ${{ env.APPLICATION_NAME}}"
-        
-    - name: List current folder
-      run: ls -la 
-
     - name: Git clone my repo
       uses: actions/checkout@v4
-
-    - name: List current folder
-      run: ls -la 
+    - name: Set up JDK 17
+    - uses: actions/checkout@v4
+    - uses: actions/setup-java@v4
+      with:
+        distribution: "${{env.DISTRIBUTION}}" 
+        java-version: "${{env.JAVA_VERSION}}"
+        cashe: maven
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
       
   my_deploy:
     runs-on: ubuntu-latest
