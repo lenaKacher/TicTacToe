@@ -2,5 +2,5 @@
 
 Ein Spiel Tic Tac Toe
 
-Status of Last Deployment:<br>
-<img src="https://github.com/lenakacher/TicTacToe/TicTacToe_Actions/badge.svg?branch=master"><br>
+Status of Last Deployment:
+![workflow](https://github.com/lenaKacher/TicTacToe/actions/workflows/main.yml/badge.svg?branch=master)
