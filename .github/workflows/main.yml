@@ -1,0 +1,23 @@
+# comments
+name: TicTacToe
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs: 
+  my_test:
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: print Hello Message
+      run : echo "Heelo World from Test"
+  
+  my_deploy:
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: print Hello Message
+      run : echo "Heelo World from Test"
+
