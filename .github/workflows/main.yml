@@ -9,28 +9,10 @@ on:
       - master
 
 jobs: 
-  my_test:
+  build:
     runs-on: ubuntu-latest
 
     steps: 
     - name: Step 1 - Checkout master branchfrom Github
       uses: actions/checkout@v4
       
-    - name: Step 2 - Set up JDK 17
-    - uses: actions/setup-java@v4
-      with:
-        distribution: "${{env.DISTRIBUTION}}" 
-        java-version: "${{env.JAVA_VERSION}}"
-        cashe: maven
-        
-    - name: Step 3 - Build with Maven
-      run: mvn -B package --file pom.xml
-
-    - name: Step 4 - List the current directory
-      run: ls -a
-
-    - name: Step 5 - What is in the taret folder?
-      run: |
-        cd target
-        ls -a 
-    
