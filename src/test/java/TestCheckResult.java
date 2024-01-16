@@ -29,7 +29,7 @@ public class TestCheckResult {
                 {' ', 'X', ' '},
                 {'0', '0', '0'}};
         checkResults.checkDraw('0');
-        Assert.assertEquals("Game over. X is a winner!", output.toString());
+        Assert.assertEquals("Game over. 0 is a winner!", output.toString());
     }
 
     @Test
