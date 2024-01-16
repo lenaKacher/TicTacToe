@@ -10,7 +10,7 @@ on:
 
 jobs: 
   my_test:
-    runs-on: ubunt-latest
+    runs-on: ubuntu-latest
 
     steps: 
     - name: print Hello Message
