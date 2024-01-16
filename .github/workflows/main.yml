@@ -1,5 +1,5 @@
 # comments
-name: TicTacToe
+name: TicTacToe_Actions
 env:
   APPLICATION_NAME    : "MyFlask"
   DEPLOY_PACKAGE_NAME : "flack-deploy-ver-${{ github.sha }}"
