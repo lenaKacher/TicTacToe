@@ -26,6 +26,7 @@ public class CheckResults extends Common {
             }
             count = 0;
         }
+
         //check diagonal from top to bottom
         for (int i = 0; i < gameFieldArray.length; i++) {
             for (int j = 0; j < gameFieldArray.length; j++) {
