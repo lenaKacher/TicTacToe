@@ -15,6 +15,9 @@ jobs:
     steps: 
     - name: Step 1 - Checkout master branch from Github
       uses: actions/checkout@v4
+      
+    - name: Get the list of the files
+      run: ls -la
     
     - name: Step 2 - Set up JDK 17
       uses: actions/setup-java@v4
