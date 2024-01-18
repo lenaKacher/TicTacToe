@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-    - name: Step 1 - Checkout master branchfrom Github
+    - name: Step 1 - Checkout master branch from Github
       uses: actions/checkout@v4
     
     - name: Step 2 - Set up JDK 17
